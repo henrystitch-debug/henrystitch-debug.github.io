@@ -35,7 +35,6 @@
             line-height: 1.6;
         }
 
-        /* NAV */
         nav {
             position: sticky;
             top: 0;
@@ -43,7 +42,7 @@
             background: rgba(247,245,240,0.88);
             backdrop-filter: blur(12px);
             border-bottom: 0.5px solid var(--border);
-            padding: 0 max(2rem, calc(50vw - 620px));
+            padding: 0 max(2rem, calc(50vw - 820px));
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -67,14 +66,12 @@
         }
         .nav-links a:hover { color: var(--ink); }
 
-        /* LAYOUT */
         .container {
-            max-width: 1240px;
+            max-width: 1640px;
             margin: 0 auto;
-            padding: 0 max(2rem, calc(50vw - 620px));
+            padding: 0 max(2rem, calc(50vw - 820px));
         }
 
-        /* HERO */
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -82,7 +79,6 @@
             align-items: center;
             padding: 6rem 0 5rem;
         }
-        .hero-text {}
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
@@ -109,10 +105,7 @@
             margin-bottom: 1.25rem;
             letter-spacing: -0.01em;
         }
-        h1 em {
-            font-style: italic;
-            color: var(--accent-mid);
-        }
+        h1 em { font-style: italic; color: var(--accent-mid); }
         .hero-desc {
             font-size: 1.05rem;
             color: var(--ink-muted);
@@ -131,12 +124,8 @@
             padding: 6px 14px;
             border-radius: 100px;
         }
-        .hero-since::before {
-            content: '◆';
-            font-size: 7px;
-        }
+        .hero-since::before { content: '◆'; font-size: 7px; }
 
-        /* HERO IMAGE SIDE */
         .hero-visual {
             display: flex;
             justify-content: flex-end;
@@ -178,20 +167,10 @@
             color: var(--ink-muted);
             line-height: 1.5;
         }
-        .img-tag strong {
-            display: block;
-            color: var(--ink);
-            font-weight: 500;
-        }
+        .img-tag strong { display: block; color: var(--ink); font-weight: 500; }
 
-        /* DIVIDER */
-        .section-divider {
-            border: none;
-            border-top: 0.5px solid var(--border);
-            margin: 0;
-        }
+        .section-divider { border: none; border-top: 0.5px solid var(--border); margin: 0; }
 
-        /* ABOUT */
         .about {
             display: grid;
             grid-template-columns: 200px 1fr;
@@ -207,12 +186,7 @@
             text-transform: uppercase;
             padding-top: 6px;
         }
-        .about-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
+        .about-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
         .about-list li {
             display: flex;
             gap: 14px;
@@ -231,7 +205,6 @@
             flex-shrink: 0;
         }
 
-        /* QUOTE */
         .quote-section {
             padding: 5rem 0;
             display: grid;
@@ -239,10 +212,7 @@
             gap: 4rem;
             align-items: start;
         }
-        blockquote {
-            position: relative;
-            padding-left: 2rem;
-        }
+        blockquote { position: relative; padding-left: 2rem; }
         blockquote::before {
             content: '\201C';
             font-family: 'DM Serif Display', serif;
@@ -268,21 +238,14 @@
             letter-spacing: 0.05em;
         }
 
-        /* PROJECTS */
-        .projects-section {
-            padding: 5rem 0 6rem;
-        }
+        .projects-section { padding: 5rem 0 6rem; }
         .projects-header {
             display: grid;
             grid-template-columns: 200px 1fr;
             gap: 4rem;
             margin-bottom: 2.5rem;
         }
-        .projects-intro {
-            font-size: 1.05rem;
-            color: var(--ink-muted);
-            line-height: 1.75;
-        }
+        .projects-intro { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.75; }
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -301,7 +264,6 @@
             flex-direction: column;
             gap: 10px;
             transition: background 0.2s;
-            position: relative;
         }
         .project-card:hover { background: var(--accent-light); }
         .project-card:hover .project-arrow { opacity: 1; transform: translate(2px, -2px); }
@@ -319,41 +281,13 @@
             border-radius: 100px;
             width: fit-content;
         }
-        .project-name {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.2rem;
-            color: var(--ink);
-            line-height: 1.2;
-        }
-        .project-desc {
-            font-size: 0.875rem;
-            color: var(--ink-muted);
-            line-height: 1.65;
-            flex: 1;
-        }
-        .project-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 6px;
-        }
-        .project-stack {
-            font-family: 'DM Mono', monospace;
-            font-size: 11px;
-            color: var(--ink-faint);
-        }
-        .project-arrow {
-            font-size: 18px;
-            color: var(--accent);
-            opacity: 0;
-            transition: opacity 0.2s, transform 0.2s;
-        }
+        .project-name { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--ink); line-height: 1.2; }
+        .project-desc { font-size: 0.875rem; color: var(--ink-muted); line-height: 1.65; flex: 1; }
+        .project-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+        .project-stack { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-faint); }
+        .project-arrow { font-size: 18px; color: var(--accent); opacity: 0; transition: opacity 0.2s, transform 0.2s; }
 
-        /* FOOTER */
-        footer {
-            border-top: 0.5px solid var(--border);
-            padding: 2rem 0;
-        }
+        footer { border-top: 0.5px solid var(--border); padding: 2rem 0; }
         .footer-inner {
             display: flex;
             align-items: center;
@@ -362,14 +296,11 @@
             font-size: 11px;
             color: var(--ink-faint);
         }
-        .footer-inner a {
-            color: var(--ink-muted);
-            text-decoration: none;
-        }
+        .footer-inner a { color: var(--ink-muted); text-decoration: none; }
         .footer-inner a:hover { color: var(--ink); }
 
         @media (max-width: 768px) {
-            .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 0 3rem; }
+            .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 0; }
             .hero-visual { justify-content: flex-start; }
             .img-frame { width: 260px; }
             .img-frame img { height: 280px; }
@@ -378,14 +309,11 @@
             nav { padding: 0 1.25rem; }
         }
 
-        /* FADE IN */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .hero-text > * {
-            animation: fadeUp 0.6s ease both;
-        }
+        .hero-text > * { animation: fadeUp 0.6s ease both; }
         .hero-text > *:nth-child(1) { animation-delay: 0.05s; }
         .hero-text > *:nth-child(2) { animation-delay: 0.15s; }
         .hero-text > *:nth-child(3) { animation-delay: 0.25s; }
@@ -406,29 +334,23 @@
 
 <div class="container">
 
-    <!-- HERO -->
     <section class="hero">
         <div class="hero-text">
             <div class="hero-eyebrow">Developer & Builder</div>
             <h1>Hi, I'm <em>Olivia</em>.</h1>
-            <p class="hero-desc">
-                Passionate developer with web experience, always learning and always open to collaboration on interesting projects.
-            </p>
+            <p class="hero-desc">Passionate developer with web experience, always learning and always open to collaboration on interesting projects.</p>
             <span class="hero-since">Business Informatics Student</span>
         </div>
         <div class="hero-visual">
             <div class="img-frame">
                 <img src="picture_stitch.webp" alt="Olivia's profile photo">
-                <div class="img-tag">
-                    <strong>Stitch</strong>
-                </div>
+                <div class="img-tag"><strong>Stitch</strong></div>
             </div>
         </div>
     </section>
 
     <hr class="section-divider">
 
-    <!-- ABOUT -->
     <section class="about" id="about">
         <div class="section-label">About me</div>
         <ul class="about-list">
@@ -436,13 +358,11 @@
             <li><span class="bullet">02</span> Interested in web development, with real-world work experience in the field.</li>
             <li><span class="bullet">03</span> Love learning new technologies and constantly expanding my knowledge.</li>
             <li><span class="bullet">04</span> Always open to collaboration and new projects — reach out anytime.</li>
-
         </ul>
     </section>
 
     <hr class="section-divider">
 
-    <!-- QUOTE -->
     <section class="quote-section">
         <div class="section-label">Motto</div>
         <blockquote>
@@ -453,27 +373,21 @@
 
     <hr class="section-divider">
 
-    <!-- PROJECTS -->
     <section class="projects-section" id="projects">
         <div class="projects-header">
             <div class="section-label">Projects</div>
-            <p class="projects-intro">
-                A selection of things I've built. Click any card to view the repository on GitHub.
-            </p>
+            <p class="projects-intro">A selection of things I've built. Click any card to view the repository on GitHub.</p>
         </div>
-
         <div class="projects-grid">
-
             <a class="project-card" href="https://github.com/henrystitch-debug/11402_CS351_Project0" target="_blank">
                 <span class="project-tag">Web</span>
                 <div class="project-name">Two Sum Project</div>
-                <p class="project-desc">Implemented solution for the famous two sum problem </p>
+                <p class="project-desc">Implemented solution for the famous two sum problem</p>
                 <div class="project-footer">
                     <span class="project-stack">C</span>
                     <span class="project-arrow">↗</span>
                 </div>
             </a>
-
             <a class="project-card" href="https://github.com/henrystitch-debug/11402_CS351_ProjectB" target="_blank">
                 <span class="project-tag">Tool</span>
                 <div class="project-name">Mini CSV Database</div>
@@ -483,17 +397,15 @@
                     <span class="project-arrow">↗</span>
                 </div>
             </a>
-
-            <a class="project-card" href="https://github.com/henrystitch-debug/BudgetBuddy" target="_blank">
+             <a class="project-card" href="https://github.com/henrystitch-debug/BudgetBuddy" target="_blank">
                 <span class="project-tag">Tool</span>
                 <div class="project-name">BudgetBuddy</div>
-                <p class="project-desc">Developed App to track your daily expenses</p>
+                <p class="project-desc">Developed App to track your expenses</p>
                 <div class="project-footer">
                     <span class="project-stack">Java</span>
                     <span class="project-arrow">↗</span>
                 </div>
             </a>
-
         </div>
     </section>
 
